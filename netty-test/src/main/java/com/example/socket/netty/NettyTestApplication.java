@@ -1,4 +1,4 @@
-package com.example.socket.netty.nettytest;
+package com.example.socket.netty;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

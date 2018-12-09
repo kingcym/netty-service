@@ -27,7 +27,7 @@ public class EchoServer {
         //处理逻辑线程
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
-            final EchoServerHandler handler = ednew EchoServerHandler();
+            final EchoServerHandler handler = new EchoServerHandler();
             //创建bootstrap
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup,workerGroup)

@@ -5,7 +5,7 @@
 <configuration status="WARN" monitorInterval="3000">
     <Properties>
         <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS}  %-5level ${sys:PID} --- [%15thread] %-45logger{45} : %m%n</property>
-        <property name="PATTERN_OUT">[%d{yyyy-MM-dd HH:mm:ss.SSS} %p][%t][%c{3}]: %m%n</property>
+        <property name="PATTERN_OUT">[%d{yyyy-MM-dd HH:mm:ss.SSS} %p][%t][%c{1.}]: %m%n</property>
     </Properties>
     <!--先定义所有的appender-->
     <appenders>
