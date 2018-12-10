@@ -41,6 +41,13 @@ public class Server {
         @Override
         public void run() {
             try {
+                /**
+                 * 1.BufferedReader:
+                 *      从字符输入流中读取文本，缓冲各个字符，从而实现字符、数组和行的高效读取。 可以指定缓冲区的大小，或者可使用默认的大小。大多数情况下，默认值足够大。
+                 * 2.InputStreamReader : 一次读取一个字符
+                 *      是字节流通向字符流的桥梁,封裝了InputStream在里头, 它以较高级的方式,一次读取一个一个字符，以文本格式输入 / 输出，可以指定编码格式；
+                 * 3.InputStream : 一次读取一个字节
+                 */
                 log.info("新客户端连接：地址：{}，端口：{}",socket.getInetAddress(),socket.getPort());
                 //得到输出流，变成对应 打印流
                 PrintStream printStream = new PrintStream(socket.getOutputStream());
@@ -48,7 +55,7 @@ public class Server {
                 BufferedReader bufferedReader = new BufferedReader(
                         new InputStreamReader(socket.getInputStream()));
                 do {
-                    //拿到一条数据 (阻塞，直到有数据可读)
+                    //拿到一条数据 (socket阻塞，直到有数据可读)
                     String readLine = bufferedReader.readLine();
                     if ("bye".equalsIgnoreCase(readLine)){
                         flag = false;
