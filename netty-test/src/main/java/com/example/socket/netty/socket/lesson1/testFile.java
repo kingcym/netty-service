@@ -28,7 +28,7 @@ public class testFile {
             InputStreamReader isr=new InputStreamReader(fis,"utf8");
             BufferedReader br=new BufferedReader(isr);
             String line;
-            while((line=br.readLine()) != null){
+            while((line=br.readLine()) != null) {
                 System.out.println(line);
             }
         } catch (Exception e) {
