@@ -23,16 +23,27 @@ import java.io.InputStreamReader;
  */
 public class testFile {
     public static void main(String[] args) {
-        try {
-            FileInputStream fis=new FileInputStream("netty-service/netty-test/target/classes/1.txt");
-            InputStreamReader isr=new InputStreamReader(fis,"utf8");
-            BufferedReader br=new BufferedReader(isr);
-            String line;
-            while((line=br.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+//        try {
+//            FileInputStream fis=new FileInputStream("netty-service/netty-test/target/classes/1.txt");
+//            InputStreamReader isr=new InputStreamReader(fis,"utf8");
+//            BufferedReader br=new BufferedReader(isr);
+//            String line;
+//            while((line=br.readLine()) != null) {
+//                System.out.println(line);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+
+
+        System.out.println("-1--");
+
+        {
+
+            System.out.println("---");
         }
+
+        System.out.println("-3--");
+
     }
 }
