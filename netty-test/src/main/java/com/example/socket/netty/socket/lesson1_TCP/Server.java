@@ -1,4 +1,4 @@
-package com.example.socket.netty.socket.lesson1;
+package com.example.socket.netty.socket.lesson1_TCP;
 
 import lombok.extern.slf4j.Slf4j;
 

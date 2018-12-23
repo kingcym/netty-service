@@ -1,4 +1,4 @@
-package com.example.socket.netty.socket.lesson1;
+package com.example.socket.netty.socket.lesson1_TCP;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -6,7 +6,6 @@ import java.io.*;
 import java.net.Inet4Address;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-import java.net.SocketException;
 
 /**
  * @Author: Kingcym
