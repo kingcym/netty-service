@@ -33,15 +33,6 @@ public class SubscribeChildChanges {
     private static final String SUPER_C2 = "/super/c2";
 
     public static void main(String[] args) {
-        String[] split = "1-1-1.7.0".split("-");
-        if (split.length == 3) {
-            //协议接入方式 1：原始协议接入 2:opensdk接入
-            System.out.println(Integer.valueOf(split[0]));
-            System.out.println(Integer.valueOf(split[1]));
-            System.out.println(split[2]);
-        }
-
-
         ZkClient zkClient = null;
         try {
             zkClient = new ZkClient(new ZkConnection("127.0.0.1:2181"), 30000);

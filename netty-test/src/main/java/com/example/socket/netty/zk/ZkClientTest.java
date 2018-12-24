@@ -32,7 +32,7 @@ public class ZkClientTest {
     private static final String SUPER_C1 = "/super/c1";
     private static final String SUPER_C2 = "/super/c2";
 
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         ZkClient zkClient = null;
         try {
             zkClient = new ZkClient(new ZkConnection("127.0.0.1:2181"), 30000);
@@ -91,22 +91,4 @@ public class ZkClientTest {
     }
 
 
-    public static void main(String[] args) throws InterruptedException {
-        ZkClient zkClient = new ZkClient(new ZkConnection("127.0.0.1:2181"), 30000);
-        if (!zkClient.exists(SUPER_C1)) {//判断指定节点是否存在
-            //创建持久化节点，true表示如果父节点不存在则创建父节点
-            zkClient.createPersistent(SUPER_C1, true);
-            //3.更新和判断节点是否存在
-            zkClient.writeData(SUPER_C1, "新内容"); //修改指定节点的值
-        }
-        TimeUnit.SECONDS.sleep(3);
-        //修改指定节点的值(先判断节点是否存在)
-        zkClient.writeData(SUPER_C1, "新内容2");
-        TimeUnit.SECONDS.sleep(3);
-
-        zkClient.deleteRecursive(SUPER);
-
-        zkClient.close();
-
-    }
 }
